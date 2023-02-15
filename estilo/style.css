@@ -1,7 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+:root {
+    --cor0:hsl(211, 28%, 19%);
+    --cor1:hsl(213, 9%, 39%);
+    --cor2:hsl(232, 10%, 55%);
+    --cor3:hsl(210, 4%, 67%);
+    --cor4:hsl(7, 99%, 70%);
+    --cor5:hsl(51, 100%, 49%);
+    --cor6:hsl(167, 40%, 24%);
+    --cor7:hsl(198, 62%, 26%);
+    --cor9:hsl(168, 34%, 41%);
+    --cor10:hsl(0, 0%, 100%);
+
+    --font-padrao: 'Josefin Sans', sans-serif;
+    --font-secundaria: 'Josefin Sans', sans-serif;
+
+}
+
+body {
+    display:block;
+}
+
+header {
+    display: grid;
+}
+
+.container {
+    overflow: auto;
+}
+
+picture {
+    display: flex;
+    float: left;
+}
+
+picture.galery {
+    display: inline;
+    
+}
+
+section.client {
+    display: flex;
+    text-align: center;
+    padding: 20px;
+    height: 800px;
+}
+
+aside {
+    display: block;
+    text-align: center;
+    align-items: baseline;
+    max-width: 300px;
+}
+
+aside > img {
+    align-items: center;
+    border-radius: 90px;
+}
+
 .attribution { 
     font-size: 11px; 
     text-align: center; 
+    position: relative;
+    top: 10em;
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+footer {
+    text-align: center;
+    height: 200px;
 }
