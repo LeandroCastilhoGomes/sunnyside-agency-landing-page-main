@@ -5,6 +5,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: var(--font-padrao);
 }
 :root {
     --cor0:hsl(211, 28%, 19%);
@@ -24,19 +25,31 @@
 }
 
 body {
-    display:grid;
+    display:flex;
+    flex-wrap: wrap;
     grid:repeat(2, 60px) auto-flow 80px ;
 }
 
 header {
-    display: grid;
+    display: flex;
+    position: relative;
+}
+
+#menu, h1 {
+    position: absolute;
+    flex: 1;
+}
+
+header > picture > img{
+    max-width: 80vw;
 }
 
 .container {
-    overflow: auto;
-}
+    display: flex;
+    width: 100vw;
+    flex-basis: auto;}
 
-picture {
+picture > img {
     display: flex;
     float: left;
 }
@@ -47,9 +60,14 @@ picture.galery {
 }
 
 section {
-    display: flex;
+    display: contents;
     width: 50em;
     flex-basis: auto;
+}
+
+div.text {
+    text-align: center;
+    width: 50vw;
 }
 
 section > picture {
@@ -63,11 +81,20 @@ section.client {
     
 }
 
+div#fruit {
+    position: relative;
+}
+
+div#descricao {
+    position: absolute;
+    right: 20em;
+}
+
 aside {
     display: block;
     text-align: center;
     align-items: baseline;
-    max-width: 300px;
+    max-width: 500px;
     flex-basis: auto;
 
 }
@@ -75,6 +102,13 @@ aside {
 aside > img {
     align-items: center;
     border-radius: 90px;
+    padding: 10px;
+
+}
+
+picture.galery {
+    display: inline-flex;
+    flex-direction: column;
 }
 
 .attribution { 
