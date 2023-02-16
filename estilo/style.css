@@ -24,7 +24,8 @@
 }
 
 body {
-    display:block;
+    display:grid;
+    grid:repeat(2, 60px) auto-flow 80px ;
 }
 
 header {
@@ -45,11 +46,21 @@ picture.galery {
     
 }
 
+section {
+    display: flex;
+    width: 50em;
+    flex-basis: auto;
+}
+
+section > picture {
+    float: left;
+}
 section.client {
     display: flex;
     text-align: center;
     padding: 20px;
     height: 800px;
+    
 }
 
 aside {
@@ -57,6 +68,8 @@ aside {
     text-align: center;
     align-items: baseline;
     max-width: 300px;
+    flex-basis: auto;
+
 }
 
 aside > img {
