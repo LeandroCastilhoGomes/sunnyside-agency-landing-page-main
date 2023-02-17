@@ -46,7 +46,7 @@ h1 {
 .logoseta {
     position: absolute;
     left: 48vw;
-    top: 50vh;
+    top: 45vh;
 }
 
 .menu > ul {
@@ -113,11 +113,17 @@ div.text {
 section > picture {
     float: left;
 }
+
+div.title {
+    text-align: center;
+}
+
 section.client {
     display: flex;
     text-align: center;
-    padding: 20px;
-    height: 800px;   
+    padding: 30px;
+    height: 800px;
+    width: 90vw;  
 }
 
 @media screen and (max-width: 720px) {
@@ -126,11 +132,11 @@ section.client {
     }
 }
 
-div#fruit {
+div.fruit {
     position: relative;
 }
 
-div#descricao {
+div.descricao {
     position: absolute;
     right: 20em;
 }
