@@ -37,13 +37,13 @@ h1 {
     color: white;
     letter-spacing: 2px;
     font-family: var(--font-secundaria);
-    font-variant: small-caps;
+    font-variant: all-small-caps;
     position: absolute;
     left: 40vw;
     top: 20vh;
 }
 
-.logoseta {
+.logoseta > img {
     position: absolute;
     left: 48vw;
     top: 45vh;
@@ -85,12 +85,25 @@ header > picture > img{
 .container {
     display: flex;
     width: 100vw;
-    flex-basis: auto;
 }
 
 section > picture > img {
     display: flex;
     width: 49vw;
+}
+
+@media screen and (max-width: 720px) {
+    #ovo > picture > img {
+      flex-direction: column;
+      width: 100vw;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .taca > picture > img {
+      flex-direction: column;
+      width: 100vw;
+    }
 }
 
 picture.galery {
@@ -108,10 +121,39 @@ section {
 div.text {
     text-align: center;
     width: 49vw;
+    margin: auto;
 }
 
-section > picture {
-    float: left;
+div.descricao {
+    height: 90vh;
+}
+
+.descricao h3 {
+    font-size: 2em;
+    position: relative;
+    bottom: 200px;
+    text-align: center;
+    width: 350px;
+    margin: auto;
+}
+
+.descricao > p {
+    position: relative;
+    bottom: 200px;
+    text-align: center;
+    width: 350px;
+    margin: auto;
+}
+
+.descricao > picture > img {
+    width: 49vw;
+}
+
+@media screen and (max-width: 720px) {
+    .descricao > picture > img {
+      flex-direction: column;
+      width: 100vw;
+    }
 }
 
 div.title {
@@ -136,10 +178,6 @@ div.fruit {
     position: relative;
 }
 
-div.descricao {
-    position: absolute;
-    right: 20em;
-}
 
 aside {
     display: block;
@@ -158,28 +196,61 @@ aside > img {
 }
 
 picture.galery {
-    display: inline-flex;
+    display: flex;
+    align-items: normal;
+}
+
+.galery > div > img {
+    width: 24.8vw;
 }
 
 @media screen and (max-width: 720px) {
     .galery {
       flex-direction: column;
+      grid: repeat(4, 80px) / auto-flow;
     }
 }
 
 .attribution { 
     font-size: 11px; 
-    text-align: center; 
-    position: relative;
-    top: 10em;
+    text-align: center;
+    padding: 30px;
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
 
 footer {
-    position: relative;
+    background-color: var(--cor9);
     text-align: center;
-    height: 200px;
-    bottom: 0;
+    margin: auto;
+    width: 100vw;
+}
+
+#logo > img {
+    margin-top: 3em;
+}
+
+#contacts > ul > li {
+    display: inline-flex;
+    list-style: none;
+    margin: 5em 8px 5em 8px;
+}
+
+#contacts > ul > li > a {
+    text-decoration: none;
+    text-align: center;
+}
+
+#contacts > ul > li > a:hover {
+    color: white;
+}
+
+#rsocial > a {
+    margin: 8em 10px 8em 10px;
+    outline-color: aliceblue;
+}
+
+#rsocial > a:hover {
+    lighting-color: white;
 }
