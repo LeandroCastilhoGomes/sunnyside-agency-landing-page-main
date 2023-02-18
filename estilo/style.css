@@ -35,13 +35,19 @@ header {
 
 h1 {
     color: white;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
+    font-size: 5em;
     font-family: var(--font-secundaria);
     font-variant: all-small-caps;
     position: absolute;
-    left: 40vw;
-    top: 20vh;
+    /* left: 38vw; */
+    top: 15vh;
+    margin: auto;
+    text-align: center;
+    max-width: 1500px;
+    line-height: 65px;
 }
+
 
 .logoseta > img {
     position: absolute;
@@ -49,23 +55,38 @@ h1 {
     top: 45vh;
 }
 
-.menu > ul {
+#sanduich {
     position: absolute;
-    padding: 20px;
-    display: flex;
+    margin: 20px;
     right: 25px;
+    cursor: pointer;
+    transition: 3s;
 }
 
-.menu > ul > li {
+#menu {
+    display: block;
+}
+
+#menu > ul {
+    position: absolute;
+    display: flex;
+    right: 80px;
+    top: 18px;
+}
+
+#menu > ul > li {
     list-style: none;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
-.menu > ul > li > a {
+#menu > ul > li > a {
+    background-color: aquamarine;
     text-decoration: none;
+    border-radius: 20px;
+    padding: 5px;
 }
 
-.menu > ul > li > a:hover {
+#menu > ul > li > a:hover {
     font-family: var(--font-padrao);
     text-decoration: none;
     background-color: white;
@@ -92,7 +113,15 @@ section > picture > img {
     width: 49vw;
 }
 
+section h2 {
+    font: bolder 3rem var(--font-secundaria);
+}
+
 @media screen and (max-width: 720px) {
+    #ovo {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
     #ovo > picture > img {
       flex-direction: column;
       width: 100vw;
@@ -120,7 +149,7 @@ section {
 
 div.text {
     text-align: center;
-    width: 49vw;
+    max-width: 350px;
     margin: auto;
 }
 
@@ -129,7 +158,7 @@ div.descricao {
 }
 
 .descricao h3 {
-    font-size: 2em;
+    font: bolder 3rem var(--font-secundaria);
     position: relative;
     bottom: 200px;
     text-align: center;
