@@ -23,29 +23,29 @@
 }
 
 body {
-    display:flex;
+    /* display:flex;
     flex-wrap: wrap;
-    grid:repeat(2, 60px) auto-flow 80px ;
+    max-width: 99vw; */
 }
 
-header {
+.container {
     display: flex;
-    position: relative;
+    width: 100vw;
 }
 
 h1 {
     color: white;
     letter-spacing: 5px;
-    font-size: 5em;
+    font-size: 15vh;
     font-family: var(--font-secundaria);
     font-variant: all-small-caps;
     position: absolute;
-    /* left: 38vw; */
+    left: 24vw;
     top: 15vh;
     margin: auto;
     text-align: center;
-    max-width: 1500px;
-    line-height: 65px;
+    max-width: 1200px;
+    line-height: 115px;
 }
 
 
@@ -60,33 +60,30 @@ h1 {
     margin: 20px;
     right: 25px;
     cursor: pointer;
-    transition: 3s;
+    transition: 1s;
+}
+
+#nav {
+    display: flex;
 }
 
 #menu {
-    display: block;
-}
-
-#menu > ul {
     position: absolute;
     display: flex;
     right: 80px;
     top: 18px;
-}
-
-#menu > ul > li {
     list-style: none;
-    margin-left: 20px;
+    gap: 5rem;
 }
 
-#menu > ul > li > a {
+#menu > li > a {
     background-color: aquamarine;
     text-decoration: none;
     border-radius: 20px;
     padding: 5px;
 }
 
-#menu > ul > li > a:hover {
+#menu > li > a:hover {
     font-family: var(--font-padrao);
     text-decoration: none;
     background-color: white;
@@ -99,13 +96,8 @@ h1 {
     padding: 20px;
 }
 
-header > picture > img{
-    max-width: 99vw;
-}
-
-.container {
-    display: flex;
-    width: 100vw;
+#imglaranja > img {
+    width: 99vw;
 }
 
 section > picture > img {
@@ -117,27 +109,48 @@ section h2 {
     font: bolder 3rem var(--font-secundaria);
 }
 
+#ovo , .taca , .img {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+.flexbox {
+    text-align: center;
+    width: 49vw;
+    margin: auto;
+}
+
 @media screen and (max-width: 720px) {
     #ovo {
         display: flex;
         flex-wrap: wrap-reverse;
     }
-    #ovo > picture > img {
-      flex-direction: column;
+    #ovo, .img {
+      flex-direction: column-reverse;
       width: 100vw;
     }
 }
 
 @media screen and (max-width: 720px) {
-    .taca > picture > img {
+    .taca, .img {
       flex-direction: column;
       width: 100vw;
     }
 }
 
-picture.galery {
-    display: inline;
-    
+.galery {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;    
+}
+
+.itens {
+    width: 25vw;
 }
 
 section {
@@ -145,13 +158,7 @@ section {
     width: 50em;
     flex-basis: auto;
 }
-  
 
-div.text {
-    text-align: center;
-    max-width: 350px;
-    margin: auto;
-}
 
 div.descricao {
     height: 90vh;
@@ -230,13 +237,13 @@ picture.galery {
 }
 
 .galery > div > img {
-    width: 24.8vw;
+    width: 25vw;
 }
 
 @media screen and (max-width: 720px) {
     .galery {
       flex-direction: column;
-      grid: repeat(4, 80px) / auto-flow;
+      grid: repeat(2, 80px) / auto-flow;
     }
 }
 
